@@ -2,7 +2,7 @@
    Complete the below for code reviewers' convenience:
 
    Code repository: https://github.com/SofiiaTrokhymchuk/a-tiny-JS-world
-   Web app: _put project's github pages URL here_
+   Web app: https://sofiiatrokhymchuk.github.io/a-tiny-JS-world/
    */
 
 // ======== OBJECTS DEFINITIONS ========
