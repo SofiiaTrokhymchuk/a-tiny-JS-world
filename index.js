@@ -1,13 +1,81 @@
 /* Refer to https://github.com/OleksiyRudenko/a-tiny-JS-world for the task details
    Complete the below for code reviewers' convenience:
 
-   Code repository: _put repo URL here_
+   Code repository: https://github.com/SofiiaTrokhymchuk/a-tiny-JS-world
    Web app: _put project's github pages URL here_
    */
 
 // ======== OBJECTS DEFINITIONS ========
 // Define your objects here
+const dog = {
+   species: 'dog',
+   name: 'Bima',
+   gender: 'female',
+   legs: 4,
+   hands: 0,
+   saying: 'Bark! ▼・ᴥ・▼'
+};
 
+const cat = {
+   species: 'cat',
+   name: 'Jessy',
+   gender: 'female',
+   legs: 4,
+   hands: 0,
+   saying: 'Meow! (=^･ω･^=)'
+};
+
+const male = {
+   species: 'human',
+   name: 'Ash Lynx',
+   gender: 'male',
+   legs: 2,
+   hands: 2,
+   saying: 'Stay with me... I won\'t ask "forever." Just for now, Eiji.'
+};
+
+const female = {
+   species: 'human',
+   name: 'Temari',
+   gender: 'female',
+   legs: 2,
+   hands: 2,
+   saying: 'Amazing. This slacker-clown outsmarted me!'
+};
+
+const catWoman = {
+   species: 'cat-woman',
+   name: 'Hello Kitty',
+   gender: 'female',
+   legs: 2,
+   hands: 2,
+   saying: cat.saying
+};
+
+function inhabitantToString(inhabitant){
+   const friends = [];
+   if(inhabitant.friends === undefined){
+      friends.push(0);
+   }else{
+      friends.push(...inhabitant.friends);
+   }
+   return `Inhabitant: ${inhabitant.species}, <strong>${inhabitant.name}</strong>, ${inhabitant.gender}, ${inhabitant.legs}, ` + 
+   `${inhabitant.hands}, <em>${inhabitant.saying}</em>. Friends: ${friends.join(", ")}`;
+};
+
+const inhabitants = [dog, cat, male, female, catWoman];
+
+function addFriends(inhabitant, friendsList){
+   inhabitant.friends = friendsList;
+};
+
+function addFriendsToInhabitants(){
+   addFriends(dog, [cat.name, 'Yasya']);
+   addFriends(female, ['Shikamaru']);
+   addFriends(catWoman, [cat.name])
+};
+
+addFriendsToInhabitants();
 
 // ======== OUTPUT ========
 /* Use print(message) for output.
@@ -28,4 +96,11 @@
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny', 'div');
    */
 
+  function printInhabitants(inhabitants){
+   inhabitants.forEach(inhabitant => {
+      print(inhabitantToString(inhabitant))
+   });
+  }
+
+  printInhabitants(inhabitants);
 
