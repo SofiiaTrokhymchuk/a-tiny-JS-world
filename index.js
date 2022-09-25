@@ -75,7 +75,7 @@ const dog = new Dog('Bima', 'female');
 const cat = new Cat('Jessy', 'female');
 const man = new Man('Ash Lynx', 'Stay with me... I won\'t ask "forever." Just for now, Eiji.');
 const woman = new Woman('Temari', 'Amazing. This slacker-clown outsmarted me!');
-const catWoman = new CatWoman('Hello Kitty')
+const catWoman = new CatWoman('Hello Kitty');
 
 dog.addFriends([cat, man]);
 woman.addFriends([dog, catWoman]);
